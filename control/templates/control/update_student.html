@@ -1,0 +1,31 @@
+{% extends 'control/base_of_student.html' %}
+
+{% block title %}UPDATE STUDENT PAGE{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <form class="col-6 mx-auto card p-3 shadow-lg" method="post">
+      {% csrf_token %}
+          <div class="mb-3">
+            <label for="sname" class="form-label">Student Name</label>
+            <input type="text" class="form-control" id="sname" value="{{student.name}}" name="student_name">
+        </div>
+
+        <div class="mb-3">
+            <label for="col" class="form-label">Collage</label>
+            <input type="text" class="form-control" id="col" value="{{student.collage}}" name="Collage">
+        </div>
+
+        <div class="mb-3">
+            <label for="year" class="form-label">Year</label>
+            <input type="number" class="form-control" id="year" value="{{student.year}}" name="year">
+        </div>
+
+        <div class="mb-3">
+            <label for="stre" class="form-label">Stream</label>
+            <input type="text" class="form-control" id="stre" value="{{student.stream}}" name="stream">
+        </div>
+        <button type="submit" class="btn btn-primary">Update Student</button>
+      </form>
+</div>
+{% endblock body %}

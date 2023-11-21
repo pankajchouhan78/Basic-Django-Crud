@@ -1,0 +1,24 @@
+{% extends 'control/base_of_student.html' %}
+
+{% block title %}Add Car{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <form class="col-6 mx-auto card p-3 shadow-lg" method='post'>
+        {% csrf_token %}
+
+        
+        <div class="mb-3">
+            <label for="cname" class="form-label">Car Name</label>
+            <input type="text" class="form-control" id="cname" name="car_name">
+        </div>
+
+        <div class="mb-3">
+            <label for="cname" class="form-label">Speed</label>
+            <input type="text" class="form-control" id="cname" name="car_speed">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Car</button>
+    </form>
+
+</div>
+{% endblock body %}
